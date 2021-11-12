@@ -52,6 +52,13 @@ return [
             'endpoint' => env('AWS_ENDPOINT'),
         ],
 
+
+        'customStorageFolder' => [
+            'driver' => 'local',
+            'root' => public_path('/uploads'),
+            'visibility' => 'public',
+        ],
+
     ],
 
     /*

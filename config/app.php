@@ -17,6 +17,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Application Version & Releae Date
+    |--------------------------------------------------------------------------
+    |
+    | This value is the version & the release date of my application.
+    | Those values are used to display the current app release version and date.
+    */
+
+    'version' => env('APP_VERSION', 'v1.0.0'),
+    'version_releaase_date' => env('APP_RELEASE_DATE', '2021-Dec-27'),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |

@@ -1,62 +1,37 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
-
+<p align="center"><a href="https://ahmedaaly.dev" target="_blank"><img src="screenshots/readme_logo/readMe_logo.png" width="500"></a></p>
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<img alt="GitHub release (latest SemVer)" src="https://img.shields.io/github/v/release/Ahmed-AAly/personalSite?display_name=tag&sort=semver&style=flat-square">
+<img alt="GitHub" src="https://img.shields.io/github/license/Ahmed-AAly/personalSite?style=flat-square">
+<img alt="Packagist PHP Version Support (specify version)" src="https://img.shields.io/packagist/php-v/laravel/framework/v8.0.0?color=orange&label=requires%20php&logo=php&style=flat-square">
 </p>
 
-## About Laravel
+## Personal Website & Micro blog
+This repository contains my personal website, the aim for its existance is to have a personal website that acts as CV and a small blog, which it can be used to share technical articles with the world.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+This app contains the following features:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- [x] Front-end area for end users.
+- [x] Micro blog for quick articles.
+- [x] Administration back-end for managing site content. 
+- [x] admin dashboard.
+- [x] Ability to to globaly put site on maintenance mode for future updates with nice message for end users.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Stack used to built this web app.
 
-## Learning Laravel
+This web app is built with the following stack:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Laravel framework v8.
+- Frontend built using both 8bit NES CSS framework & bootstrap 4 CSS framework.
+- Vanilla javascript & jQuery for app interactions & Ajax requests.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## System requirements.
 
-## Laravel Sponsors
+To deploy this app make sure that PHP >= 7.3 is installed on your server.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## PHP extended coding style.
 
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+PHP PSR-12 coding style have been followed in nearly all codebase.
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+This web application is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).

@@ -1,0 +1,325 @@
+@font-face {
+    font-family: 'press_start_2pregular';
+    src: url('/fonts/pressstart2p-regular.woff2') format('woff2'),
+         url('/fonts/pressstart2p-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'kongtextregular';
+    src: url('/fonts/kongtext.woff2') format('woff2'),
+         url('/fonts/kongtext.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+.font-class1{
+    font-family: 'press_start_2pregular';
+}
+
+
+.font-class2{
+    font-family: 'kongtextregular';
+}
+
+/* updated navbar Classes */
+.nav-bar-custom{
+  background-color: #212529;
+  width: 100%;
+  display: flex;
+}
+
+.nav-brand-custom{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.nav-bar-8bit {
+  overflow: hidden;
+  background-color: #212529;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.nav-bar-8bit ul li a{
+  color: #f2f2f2;
+}
+
+nav.navbar.navbar-expand-lg.navbar-dark.nav-bar-8bit a:hover{
+  background-color: #ddd;
+  color: black;
+}
+
+div.collapse.navbar-collapse.justify-content-center ul li a{
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media only screen and (max-width: 992px) {
+  div.collapse.navbar-collapse.justify-content-center ul li a{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+nav.navbar-dark button.navbar-toggler{
+  border-color:#0ff0;
+  padding: 0;
+}
+.personal-img{
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  border: 5px solid white;
+}
+
+@media only screen and (max-width: 736px) {
+  .personal-img{
+    width: 180px;
+    height: 180px;
+  }
+}
+
+.box-img{
+  margin-top: -130px;
+  margin-bottom: 20px;
+}
+
+.homeback{
+  /* margin-top: 0; */
+  background-image: url("/img/newBanner.png");
+  background-repeat: round;
+  background-size:  contain;
+  /* background-color: #171a1d; */
+  height: auto;
+  display: block;
+  -webkit-box-shadow: 0px 5px 22px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 22px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 22px 1px rgba(0,0,0,0.75);
+  /* outline: 5px solid white;
+  outline-offset: -15px; */
+}
+
+.home-head{
+  font-size: 1.5rem;
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  margin: auto;
+}
+
+@media only screen and (max-width: 736px) {
+  .home-head{
+    font-size: 1.0rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .bio-custom{
+    font-size: 0.8rem;
+  }
+}
+
+.certi-logo{
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  border: 5px solid white;
+}
+
+.bg-blog-color{
+  padding-top: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Add shadows to create the "card" effect */
+.blog {
+  
+  display: block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: white;
+  width: 100%;
+  margin: auto;
+  padding: 6px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.blog:hover {
+  box-shadow: 0 8px 25px 0 rgba(0,0,0,0.2);
+}
+
+.blog-img{
+  position:relative;
+  max-width: 100%;
+  height: 250px;
+  display: block;
+  margin: auto;
+}
+
+/* Add some padding inside the card container */
+.container-blog {
+  padding: 2px 16px;
+  padding-bottom: 10px;
+}
+
+#blog-title{
+  font-size: 2.0rem;
+}
+
+
+#blog-content{
+  /* float: left; */
+  font-size: 1.0rem;
+  max-width: 100%;
+  height: auto;
+  font-family:'Courier New', Courier, monospace;
+
+}
+
+.blog-post-view-img{
+  display: block;
+  border: 5px solid white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+@media only screen and (max-width: 750px) {
+  .blog-post-view-img{
+    width: 100%;
+  }
+}
+
+#page-not-avalible{
+  background-color: #e76e55;
+  padding: 15px;
+  border: 5px solid #212529;
+  color: white;
+}
+
+span#page-not-avalible {
+    display: block;
+    text-align: center;
+}
+
+.search-bar{
+  display: block;
+  margin: auto;
+}
+
+.footer-custome{
+  margin: auto;
+  padding:20px;
+
+}
+.img-post-size{
+  max-width: 100%;
+  height: 250px;
+}
+
+@media only screen and (max-width: 410px) {
+  .img-post-size{
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+form input{
+  color: black;
+}
+
+form textarea{
+  color: black;
+}
+
+#v-num {
+    display:  contents;
+    float: left;
+    font-family: initial;
+}
+
+#rm-underline{
+  text-decoration: none;
+}
+
+/* Banner text colors */
+/* .banner-text-color{
+  background: #FCF508;
+  background: -webkit-linear-gradient(to right, #FCF508 0%, #F58902 50%, #EA0011 100%);
+  background: -moz-linear-gradient(to right, #FCF508 0%, #F58902 50%, #EA0011 100%);
+  background: linear-gradient(to right, #FCF508 0%, #F58902 50%, #EA0011 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+div.banner-text-color{
+  color: #ddd;
+  font-size: 0.90rem;
+  background-color: #212529c4;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding: 10px;
+  outline: 5px solid white;
+  outline-offset: -15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 992px) {
+  div.banner-text-color{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* Banner text animation */
+.text-pop{
+  animation: pop 0.25s ease-in-out;
+}
+.text-pop-with-delay {
+  animation-delay: 0.05s;
+}
+@keyframes pop{
+  50%  {
+    transform: scale(1.25);
+  }
+}
+
+/* Scrol tp top */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  z-index: 99;
+  color: white;
+}
+
+img.nes-avatar.is-large{
+  width: 120px;
+  padding: 10px;
+}
+
+
+a i.nes-icon.trophy::before{
+  animation-timing-function: linear;
+  animation-name: shining;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shining {
+  from {color: #EEE8AA;}
+  to {color: #FFD700;}
+}
