@@ -4,8 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
-use App\Services\SiteSettingsService;
-use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\Cache;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,10 +23,18 @@ class AppServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot(SiteSettingsService $siteSettingsService)
+    public function boot()
     {
         Paginator::useBootstrap();
-        $siteSettingsCache = $siteSettingsService->getSettings();
-        View::share('siteSettings', $siteSettingsCache);
+
+        // this part is a work arround to a problem that is triggered
+        // when caches are cleared, all users both visitors and site owner
+        // wouldn't be able to take any action if the site setting caches were not defind.
+        if (!Cache::has('siteSettings')) {
+            Cache::rememberForever('siteSettings', function () {
+                $siteSettingsCache = ['maintenancemode' => 'false'];
+                return $siteSettingsCache;
+            });
+        }
     }
 }

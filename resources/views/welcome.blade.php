@@ -2,8 +2,8 @@
 @section('title', 'Home')
 @section('content')
 <!-- Banner Section  -->
-@section('mainBannerTitle', 'Hi There!')
-@section('seconderyBannerTitle', 'How are you doing today?')
+@section('mainBannerTitle', __('backendLang.homebanner1'))
+@section('seconderyBannerTitle', __('backendLang.homebanner2'))
 @include('frontend_layouts.banner')
 <!-- About Me -->
 <div class="container" style="margin-top: 70px;">

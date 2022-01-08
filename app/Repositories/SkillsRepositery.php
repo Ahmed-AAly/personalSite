@@ -6,7 +6,6 @@ use App\Models\Skills;
 
 class SkillsRepositery
 {
-
     /**
      * @var Skills $skills
      */
@@ -19,7 +18,7 @@ class SkillsRepositery
 
 
     /**
-     * Query the DB for all user skills
+     * get all user skillset from storage.
      * @return object
      */
     public function querySkills(): object
@@ -28,7 +27,7 @@ class SkillsRepositery
     }
 
     /**
-     * Query the DB for all active user skills
+     * get all active skillset from storage.
      * @return object
      */
     public function queryActiveSkills(): object
@@ -37,7 +36,7 @@ class SkillsRepositery
     }
 
     /**
-     * stores new skills to DB
+     * store new skill to storage
      * @param string $skillName
      * @param int $skillStatus
      */
@@ -55,7 +54,7 @@ class SkillsRepositery
     }
 
     /**
-     * update skills on DB
+     * update skill on storage.
      * @param int $skillID
      * @param string $skillName
      * @param int $skillStatus
@@ -71,7 +70,7 @@ class SkillsRepositery
     }
 
     /**
-     * removes skills from DB
+     * removes skills from storage.
      * @param int $skillID
      */
     public function removeSkillQuery(int $skillID): bool

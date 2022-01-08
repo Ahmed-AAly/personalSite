@@ -18,7 +18,7 @@ class ContactMeRepositery
     }
 
     /**
-     * Query the DB for all messges.
+     * Query storage for all messages.
      * @return object
      */
     public function queryAllMessages(): object
@@ -28,21 +28,8 @@ class ContactMeRepositery
         ->paginate(20);
     }
 
-    // /**
-    //  * Query the DB for all user.
-    //  * @return Type|object
-    //  */
-    // public function getAllMessagesGroupedByDate(): object
-    // {
-    //     return $this->contactMe->select(DB::raw('DATE(created_at) as date'), DB::raw('count(id) as totalMessages'))
-    //     ->groupBy('date')
-    //     ->orderBy('date', 'asc')
-    //     ->get();
-    // }
-
-
     /**
-     * Query the DB for all user.
+     * get count of all recived messages grouped by dates.
      * @param Type|int $year
      * @param Type|int $month
      * @return Type|int
@@ -57,7 +44,6 @@ class ContactMeRepositery
 
     /**
      * query storge for top 5 contacts.
-     *
      * @param Type|void
      * @return array
      */
@@ -72,7 +58,7 @@ class ContactMeRepositery
 
 
     /**
-     * store contact to storage
+     * store contact to storage.
      * @param Type|string $contactName
      * @param Type|string $contactEmail
      * @param Type|string $contactMessage
@@ -93,7 +79,7 @@ class ContactMeRepositery
     }
 
     /**
-     * removes message from DB
+     * removes message from storage.
      * @param Type|int $messageID
      */
     public function removeMessageQuery(int $messageID): bool

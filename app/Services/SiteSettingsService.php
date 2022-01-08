@@ -5,15 +5,7 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Repositories\SiteSettingsRepository;
-use Exception;
-use Illuminate\Support\Facades\log;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
-use InvalidArgumentException;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Storage;
-use App\Models\Biography;
 use Illuminate\Support\Facades\Cache;
 
 class SiteSettingsService
@@ -29,7 +21,12 @@ class SiteSettingsService
     }
 
     /**
-     * Admin biography homepage.
+     * This method handles caching the site settngs once invoked.
+     * This is done in order to avoid unreasonable DB calls.
+     * During first time installtion this method is not invoked,
+     * however all cache are loaded directly once settings migration are done
+     * via the seeder class, this is done as a work arround, and will be improved,
+     * in the future.
      * @param Type|null $var
      * @return object
      */

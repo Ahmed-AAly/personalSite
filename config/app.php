@@ -24,8 +24,8 @@ return [
     | Those values are used to display the current app release version and date.
     */
 
-    'version' => env('APP_VERSION', 'v1.0.0'),
-    'version_releaase_date' => env('APP_RELEASE_DATE', '2021-Dec-27'),
+    'version' => env('APP_VERSION', 'v1.1.0'),
+    'version_releaase_date' => env('APP_RELEASE_DATE', '2022-Jan-08'),
 
     /*
     |--------------------------------------------------------------------------

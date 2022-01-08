@@ -27,6 +27,14 @@
                     <li class="nav-item {{ request()->is('admin/blog/blog') ? 'active' : '' }}">
                         <a class="nav-link" href="{{route('blog')}}">Blog</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            Miscellaneous
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="{{route('licenseAttributes')}}">license & Attributes</a>
+                        </div>
+                      </li>
                 </ul>                
             @endauth
 

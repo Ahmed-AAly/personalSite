@@ -17,7 +17,7 @@ class CertificationsRepositery
     }
 
     /**
-     * Query the DB for all user skills
+     * Query the storage for all user certificates
      * @return object
      */
     public function queryCerts(): object
@@ -29,7 +29,7 @@ class CertificationsRepositery
     }
 
     /**
-     * stores new certification to DB
+     * stores new certification to storage
      * @param string $certificateName
      * @param string $certificateUrl
      * @param int $certificateProvider
@@ -59,7 +59,7 @@ class CertificationsRepositery
 
 
     /**
-     * stores new skills to DB
+     * update selected certificate.
      * @param int $certificateID
      * @param string $certificateName
      * @param string $certificateUrl
@@ -88,7 +88,7 @@ class CertificationsRepositery
     }
 
     /**
-     * removes skills from DB
+     * removes certificate from storage.
      * @param int $certID
      */
     public function removeCertificateQuery(int $certID): bool

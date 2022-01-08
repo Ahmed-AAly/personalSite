@@ -2,8 +2,8 @@
 @section('title', 'Skills & Certifications')
 @section('content')
 {{-- Banner Section --}}
-@section('mainBannerTitle', 'Skillset &')
-@section('seconderyBannerTitle', 'Certifications')
+@section('mainBannerTitle', __('backendLang.homebanner3'))
+@section('seconderyBannerTitle', __('backendLang.homebanner4'))
 @include('frontend_layouts.banner')
 <!-- Content -->
 <div class="container mt-5">

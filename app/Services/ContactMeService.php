@@ -38,7 +38,8 @@ class ContactMeService
     }
 
     /**
-     * get full list of stored certification records.
+     * Adminstration backend.
+     * return adminstrator dashboard view, with recived messages & charts data.
      * @return object
      */
     public function getAllContactMessages(): object
@@ -54,8 +55,8 @@ class ContactMeService
     }
 
     /**
-     * get total messages count grouped by month
-     *
+     * Adminstration backend.
+     * get total messages count grouped by month.
      * @param Type|void
      * @return void
      */
@@ -82,7 +83,7 @@ class ContactMeService
 
 
     /**
-     * handles adding new certificate
+     * handles storing new contact message request.
      * @param object $request
      * @return \Illuminate\Http\Response
      */
@@ -108,15 +109,16 @@ class ContactMeService
             );
 
             if ($storeContactMessage) {
-                return back()->with('messageSent', 'Your message was sucessfully sent');
+                return back()->with('messageSent', __('backendLang.confirmMsgSent'));
             }
             if (!$storeContactMessage) {
-                return back()->with('messageFailed', 'Opps failed to send message');
+                return back()->with('messageFailed', __('backendLang.failedToSendMsg'));
             }
         }
     }
 
     /**
+     * Adminstration backend.
      * handles removing messages request
      * @param object $request
      * @return \Illuminate\Http\Response
@@ -137,10 +139,10 @@ class ContactMeService
             $removeMessage = $this->contactMeRepositery->removeMessageQuery((int) $request->meg_id);
 
             if ($removeMessage) {
-                return back()->with('successstatus', 'Successfully deleted Message');
+                return back()->with('successstatus', __('backendLang.confirmMsgDeleted'));
             }
             if (!$removeMessage) {
-                return back()->with('failedstatus', 'Opps failed to delete Message');
+                return back()->with('failedstatus', __('backendLang.failedToDeletMsg'));
             }
         }
     }

@@ -8,16 +8,16 @@
     <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link {{ request()->is('/') ? 'bg-white text-dark' : '' }}" href="{{route('landingPage')}}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link {{ request()->is('/') ? 'bg-white text-dark' : '' }}" href="{{route('landingPage')}}">{{__('backendLang.homeNav')}}<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('skills-certifications') ? 'bg-white text-dark' : '' }}" href="{{route('skillsAndCertifications')}}">Skills and Certifications</a>
+                <a class="nav-link {{ request()->is('skills-certifications') ? 'bg-white text-dark' : '' }}" href="{{route('skillsAndCertifications')}}">{{__('backendLang.skillsAndCertsNav')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('blog') ? 'bg-white text-dark' : '' }}" href="{{route('frontEndBlog')}}">Blog</a>
+                <a class="nav-link {{ request()->is('blog') ? 'bg-white text-dark' : '' }}" href="{{route('frontEndBlog')}}">{{__('backendLang.blogNav')}}</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{ request()->is('contact') ? 'bg-white text-dark' : '' }}" href="{{route('frontEndContactMe')}}">Contact Me</a>
+                <a class="nav-link {{ request()->is('contact') ? 'bg-white text-dark' : '' }}" href="{{route('frontEndContactMe')}}">{{__('backendLang.contactNav')}}</a>
             </li>
         </ul>
         <div class="form-inline my-2 my-lg-0">

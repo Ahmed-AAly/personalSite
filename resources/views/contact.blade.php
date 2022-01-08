@@ -2,8 +2,8 @@
 @section('title', 'Contact')
 @section('content')
 {{-- Banner Section --}}
-@section('mainBannerTitle', 'Wanna contact me?')
-@section('seconderyBannerTitle', 'Feel free to send me a quick message')
+@section('mainBannerTitle', __('backendLang.homebanner5'))
+@section('seconderyBannerTitle', __('backendLang.homebanner6'))
 @include('frontend_layouts.banner')
 <!-- Contact Form -->
 <div class="container mt-5">
@@ -15,7 +15,7 @@
                             <span class="nes-text is-success">{{ session('messageSent') }}</span>
                         @endif
                         @if (session('messageFailed'))
-                            <span class="nes-text is-success">{{ session('messageFailed') }}</span>
+                            <span class="nes-text is-error">{{ session('messageFailed') }}</span>
                         @endif
                         @if ($errors->any())
                             @foreach ($errors->all() as $error)

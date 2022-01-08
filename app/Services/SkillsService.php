@@ -7,7 +7,6 @@ namespace App\Services;
 use App\Repositories\SkillsRepositery;
 use Exception;
 use Illuminate\Support\Facades\log;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use InvalidArgumentException;
 use Illuminate\Support\Facades\Redirect;
@@ -15,7 +14,6 @@ use Illuminate\Http\RedirectResponse;
 
 class SkillsService
 {
-
     /**
      * @var SkillsRepositery $skillsRepositery
      */
@@ -37,7 +35,7 @@ class SkillsService
     }
 
     /**
-     * get active skills only
+     * get active list of skills
      */
     public function getActiveSkills(): object
     {
@@ -48,6 +46,7 @@ class SkillsService
 
 
     /**
+     * Adminstration backend.
      * Handles adding new skills request.
      * @param object $request
      * @return \Illuminate\Http\Response
@@ -69,16 +68,17 @@ class SkillsService
             $addNewSkill = $this->skillsRepositery->addNewSkill($request->skill_name, (int) $request->skill_status);
 
             if ($addNewSkill) {
-                return back()->with('successstatus', 'New skill successfully added');
+                return back()->with('successstatus', __('backendLang.succAddSkill'));
             }
             if (!$addNewSkill) {
-                return back()->with('failedstatus', 'Opps failed to add new skill');
+                return back()->with('failedstatus', __('backendLang.failedToAddSKill'));
             }
         }
     }
 
 
     /**
+     * Adminstration backend.
      * handles updating skill request.
      * @param object $request
      * @return \Illuminate\Http\Response
@@ -103,15 +103,16 @@ class SkillsService
             ->updateSkillQuery((int) $request->skill_id, $request->skill_name, (int) $request->skill_status);
 
             if ($addNewSkill) {
-                return back()->with('successstatus', 'Successfully updated skill');
+                return back()->with('successstatus', __('backendLang.succUpdatedSkill'));
             }
             if (!$addNewSkill) {
-                return back()->with('failedstatus', 'Opps failed to update skill');
+                return back()->with('failedstatus', __('backendLang.failedToUpdateSKill'));
             }
         }
     }
 
     /**
+     * Adminstration backend.
      * handles removing skill request.
      * @param object $request
      * @return \Illuminate\Http\Response
@@ -132,10 +133,10 @@ class SkillsService
             $addNewSkill = $this->skillsRepositery->removeSkillQuery((int) $request->skill_ID);
 
             if ($addNewSkill) {
-                return back()->with('successstatus', 'Successfully deleted skill');
+                return back()->with('successstatus', __('backendLang.succRemoveSkill'));
             }
             if (!$addNewSkill) {
-                return back()->with('failedstatus', 'Opps failed to delete skill');
+                return back()->with('failedstatus', __('backendLang.failedToRemoveSKill'));
             }
         }
     }

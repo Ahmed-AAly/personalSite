@@ -78,4 +78,9 @@ Route::middleware(['auth'])->group(function () {
     // Change admin password.
     Route::post('/admin/change-pwd', [App\Http\Controllers\Auth\ChangeAdminPasswordController::class, 'update'])
     ->name('changePwd');
+    // license & Attributes.
+    Route::get('/admin/license-attributes', [App\Http\Controllers\Admin\LicenseAttributeController::class, 'index'])
+    ->name('licenseAttributes');
+    Route::put('/admin/update-lic-attrs/{id}', [App\Http\Controllers\Admin\LicenseAttributeController::class, 'update'])
+    ->name('updateLicenseAttributes');
 });

@@ -27,7 +27,8 @@ class BlogService
     }
 
     /**
-     * directs the user ro blog main home page.
+     * directs the user to blog admin main home page.
+     * adminstration backend.
      * @param Type|void
      * @return Type|object Illuminate\Http\Response
      */
@@ -39,8 +40,8 @@ class BlogService
     }
 
     /**
-     * directs the user ro blog main home page.
-     *
+     * directs the user to blog main home page
+     * site visitors frondend.
      * @param Type|void
      * @return Type|object Illuminate\Http\Response
      */
@@ -51,8 +52,7 @@ class BlogService
     }
 
     /**
-     * directs the user ro blog main home page.
-     *
+     * load article content.
      * @param Type|int $id
      * @return Type|object Illuminate\Http\Response
      */
@@ -67,17 +67,16 @@ class BlogService
     }
 
     /**
-     * handles the user search request for a post.
-     *
+     * handles the user search request for a article.
      * @param Type|object $request
      * @return Type|object Illuminate\Http\Response
      */
     public function searchPost(object $request): object
     {
         $messages = [
-            'post_title.required' => 'Must provide search keywords in order to proceed',
-            'post_title.max' => 'Maximum allowed characters is 50',
-            'post_title.min' => 'minimum allowed characters to search is 3',
+            'post_title.required' => __('backendLang.searchTitleRequired'),
+            'post_title.max' => __('backendLang.searchMaxChar'),
+            'post_title.min' => __('backendLang.searchMinChar'),
         ];
 
         $validator = Validator::make($request->all(), [
@@ -93,14 +92,15 @@ class BlogService
         $searchResults = $this->blogRepositery->searchBlogPost($request->post_title, true);
 
         if ($searchResults->isEmpty()) {
-            return back()->with('noArticleFound', 'Sadly did not find any search results for the provided keywords');
+            return back()->with('noArticleFound', __('backendLang.noArticleFound'));
         } else {
             return view('blog.search', compact('searchResults'));
         }
     }
 
     /**
-     * directs the user to the publishing form.
+     * adminstration backend.
+     * directs the user to article publishing form.
      * @param Type|void
      * @return Type|object Illuminate\Http\Response
      */
@@ -110,7 +110,8 @@ class BlogService
     }
 
     /**
-     * handles publishing new post.
+     * adminstration backend.
+     * handles publishing new article.
      * @param object $request
      * @return \Illuminate\Http\Response
      */
@@ -146,16 +147,17 @@ class BlogService
             );
 
             if ($storeNewPost) {
-                return redirect()->route('blog')->with('successstatus', 'Article was sucessfully published');
+                return redirect()->route('blog')->with('successstatus', __('backendLang.articlePublished'));
             }
             if (!$storeNewPost) {
-                return back()->with('failedstatus', 'Opps failed to publish new article');
+                return back()->with('failedstatus', __('backendLang.failedToPublished'));
             }
         }
     }
 
     /**
-     * handles adding new certificate
+     * adminstration backend.
+     * directs user to article edit form.
      * @param object $request
      * @return \Illuminate\Http\Response
      */
@@ -179,7 +181,8 @@ class BlogService
     }
 
     /**
-     * handles adding new certificate
+     * adminstration backend.
+     * handles article update request.
      * @param object $request
      * @return \Illuminate\Http\Response
      */
@@ -227,16 +230,17 @@ class BlogService
             );
 
             if ($updatePost) {
-                return redirect()->route('blog')->with('successstatus', 'Article was successfully updated');
+                return redirect()->route('blog')->with('successstatus', __('backendLang.articleUpdated'));
             }
             if (!$updatePost) {
-                return back()->with('failedstatus', 'Opps failed to update article');
+                return back()->with('failedstatus', __('backendLang.failedToUpdate'));
             }
         }
     }
 
     /**
-     * handles removing certificate request
+     * adminstration backend.
+     * handles removing article request.
      * @param object $request
      * @return \Illuminate\Http\Response
      */
@@ -259,10 +263,10 @@ class BlogService
             $deletePOst = $this->blogRepositery->removeBLogPostQuery(intval($request->post_id));
 
             if ($deletePOst) {
-                return back()->with('successstatus', 'Successfully deleted article');
+                return back()->with('successstatus', __('backendLang.articleDeleted'));
             }
             if (!$deletePOst) {
-                return back()->with('failedstatus', 'Opps failed to delete article');
+                return back()->with('failedstatus', __('backendLang.failedToDelete'));
             }
         }
     }

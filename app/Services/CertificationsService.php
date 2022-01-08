@@ -36,6 +36,7 @@ class CertificationsService
 
 
     /**
+     * adminstration backend.
      * return all required data to load certificates view.
      * @return \Illuminate\Http\Response
      */
@@ -62,6 +63,7 @@ class CertificationsService
 
 
     /**
+     * adminstration backend.
      * handles adding new certificate request.
      * @param object $request
      * @return \Illuminate\Http\Response
@@ -90,10 +92,10 @@ class CertificationsService
             );
 
             if ($addNewCerti) {
-                return back()->with('successstatus', 'New certificate successfully added');
+                return back()->with('successstatus', __('backendLang.succaddCerti'));
             }
             if (!$addNewCerti) {
-                return back()->with('failedstatus', 'Opps failed to add new certificate');
+                return back()->with('failedstatus', __('backendLang.failedTOAddCerti'));
             }
         }
     }
@@ -131,10 +133,10 @@ class CertificationsService
             );
 
             if ($updateCert) {
-                return back()->with('successstatus', 'Successfully updated certificate');
+                return back()->with('successstatus', __('backendLang.succUPdatCerti'));
             }
             if (!$updateCert) {
-                return back()->with('failedstatus', 'Opps failed to update certificate');
+                return back()->with('failedstatus', __('backendLang.failedToUPdateCerti'));
             }
         }
     }
@@ -161,10 +163,10 @@ class CertificationsService
             $addNewSkill = $this->certificationsRepositery->removeCertificateQuery((int) $request->cert_ID);
 
             if ($addNewSkill) {
-                return back()->with('successstatus', 'Successfully deleted certificate');
+                return back()->with('successstatus', __('backendLang.succDeletCerti'));
             }
             if (!$addNewSkill) {
-                return back()->with('failedstatus', 'Opps failed to delete certificate');
+                return back()->with('failedstatus', __('backendLang.failedToDeletCerti'));
             }
         }
     }

@@ -16,7 +16,7 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="msapplication-config" content="{{ asset(mix('img/browserconfig.xml')) }}">
         <meta name="theme-color" content="#ffffff">
-        <title>Maintenance Page</title>
+        <title>{{__('backendLang.maintPgTitle')}}</title>
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
@@ -28,13 +28,13 @@
     </head>
     <body class="font-class2">
         <main>
-            <div class="container" style="margin-top: 200px;">
+            <div class="container" style="margin-top: 150px;">
                 <div class="row justify-content-md-center">
                     <div class="col-md-8">
                      <div class="nes-container with-title is-dark is-centered">
-                         <p class="title">Sorry, this website is down for maintenance</p>
+                         <p class="title">{{__('backendLang.maintTitle')}}</p>
                          <i class="nes-kirby"></i>
-                         <p>People of earth we are currently doing quick system maintenance and updates, we will be back ASAP</p>
+                         <p>{{__('backendLang.maintBodyMessage')}}</p>
                        </div>
                     </div>
                 </div>

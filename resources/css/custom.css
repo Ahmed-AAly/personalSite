@@ -296,7 +296,7 @@ div.banner-text-color{
   }
 }
 
-/* Scrol tp top */
+/* Scrol to top */
 #myBtn {
   display: none;
   position: fixed;
@@ -322,4 +322,13 @@ a i.nes-icon.trophy::before{
 @keyframes shining {
   from {color: #EEE8AA;}
   to {color: #FFD700;}
+}
+
+/* License and attributes styling */
+#license-Attrs-style{
+  font-size: 1.0rem;
+  max-width: 100%;
+  height: auto;
+  font-family:'Courier New', Courier, monospace;
+
 }

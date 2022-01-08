@@ -64,7 +64,7 @@ class BlogRepositery
     }
 
     /**
-     * Store article to DB.
+     * Store article to storage.
      * @param Type|string $imgPath
      * @param Type|string $title
      * @param Type|string $blogContent
@@ -88,7 +88,7 @@ class BlogRepositery
 
 
     /**
-     * Update article on DB.
+     * Update article on storage.
      * @param Type|int $int
      * @param Type|string $imgPath
      * @param Type|string $title
@@ -115,7 +115,7 @@ class BlogRepositery
     }
 
     /**
-     * removes article from DB
+     * removes article from storage
      * @param int $blogPostID
      */
     public function removeBLogPostQuery(int $blogPostID): bool

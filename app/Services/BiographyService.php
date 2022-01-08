@@ -71,10 +71,10 @@ class BiographyService
             ->updateBiographyAtStorage((int) $request->id, $request->story, $imgPath);
 
             if ($updateBiography) {
-                return redirect()->back()->with('successstatus', 'Biography was sucessfully updated');
+                return redirect()->back()->with('successstatus', __('backendLang.succBioUPdt'));
             }
             if (!$updateBiography) {
-                return back()->with('failedstatus', 'Opps failed to update biography');
+                return back()->with('failedstatus', __('backendLang.failedToUPdtBio'));
             }
         }
     }

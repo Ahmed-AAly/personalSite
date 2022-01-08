@@ -8,7 +8,6 @@ use App\Services\SkillsService;
 
 class SkillsController extends Controller
 {
-
     /**
      * @var SkillsService $skillsService
      */
