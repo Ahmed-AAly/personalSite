@@ -1,4 +1,5 @@
 import { Chart, registerables } from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 Chart.register(...registerables);
 
 // admin dashboard chart monthly message trend.
@@ -19,12 +20,18 @@ $(function () {
                 backgroundColor: '#7400B8',
                 borderColor: '#80FFDB',
                 data: msgCounts,
+                datalabels: {
+                    color: 'black',
+                    anchor: 'end',
+                    align: 'right'
+                }
             }]
         };
         
         const config = {
             type: 'line',
             data: data,
+            plugins: [ChartDataLabels],
             options: {}
         };
         
@@ -58,12 +65,16 @@ $(function () {
                     '#4EA8DE'
                   ],
                 data: contactTotalMessages,
+                datalabels: {
+                    color: 'white',
+                }
             }]
         };
         
         const configTopFIve = {
             type: 'doughnut',
             data: dataTopFive,
+            plugins: [ChartDataLabels],
             options: {
                 plugins: {
                     title: {

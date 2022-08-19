@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="description" content="Personal Website">
-        <meta name="keywords" content="Personalsite, Moodle, PHP, SQL, Elearning, Laravel, Jquery, MySQL">
+        <meta name="keywords" content="Personalsite, Moodle, PHP, SQL, Elearning, Laravel, Jquery, MySQL, Moodle Plugin Development, Moodle Adminstration">
         <meta name="author" content="Ahmed Ali">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset(mix('img/apple-touch-icon.png')) }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset(mix('img/favicon-32x32.png')) }}">
@@ -17,8 +17,6 @@
         <meta name="msapplication-config" content="{{ asset(mix('img/browserconfig.xml')) }}">
         <meta name="theme-color" content="#ffffff">
         <title>@yield('title')</title>
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
         <link rel="stylesheet" href="{{ asset(mix('css/nes.css')) }}">
